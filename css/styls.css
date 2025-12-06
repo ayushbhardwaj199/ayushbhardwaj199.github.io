@@ -29,7 +29,7 @@ body {
 
 .hero {
     height: 60vh;
-    background: url('../assets/img-placeholder.jpg') center/cover no-repeat;
+    background: url('../assets/background-placeholder.png') center/cover no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
