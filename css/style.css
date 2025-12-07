@@ -1,70 +1,206 @@
+/* ===== Google Fonts ===== */
 body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f7f7f7;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
+/* ===== Navbar ===== */
 .navbar {
-    background: #111;
-    padding: 10px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 15px 50px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .logo img {
+    height: 40px;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
 }
 
-.nav-links a {
-    color: white;
+.nav-links li a {
     text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
-.active {
-    border-bottom: 2px solid red;
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: #e60012; /* Toyota red */
 }
 
+/* ===== Hero Section ===== */
 .hero {
-    height: 60vh;
-    background: url('../assets/background-placeholder.png') center/cover no-repeat;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    padding-left: 50px;
-    color: white;
-    background-color: black;
+    align-items: center;
+    text-align: center;
+    background: url('https://ayushbhardwaj199.github.io/assets/background-placeholder.png') no-repeat center/cover;
+    height: 80vh;
+    color: #fff;
+    position: relative;
 }
 
-.btn, .btn-small {
-    display: inline-block;
-    background: red;
-    padding: 10px 20px;
-    color: white;
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Overlay for readability */
+    z-index: 1;
+}
+
+.hero .hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.btn-primary {
+    background-color: #e60012;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 50px;
     text-decoration: none;
-    margin-top: 10px;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #b8000f;
+}
+
+/* ===== Models Preview Section ===== */
+.models-preview {
+    padding: 60px 50px;
+    text-align: center;
+}
+
+.models-preview h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
 }
 
 .grid {
     display: flex;
-    justify-content: center;
     gap: 30px;
-    padding: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .card {
-    background: white;
-    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
     width: 300px;
-    box-shadow: 0 0 10px #ccc;
-    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 15px 0 10px;
+}
+
+.card p {
+    padding: 0 15px 15px;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.card .btn-small {
+    display: inline-block;
+    margin: 0 0 15px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    background-color: #e60012;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.card .btn-small:hover {
+    background-color: #b8000f;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* ===== Footer ===== */
 footer {
-    background: #111;
-    color: white;
     text-align: center;
-    padding: 20px;
+    padding: 25px 50px;
+    background-color: #fff;
+    color: #666;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 15px 30px;
+    }
+
+    .grid {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .grid {
+        flex-direction: column;
+        align-items: center;
+    }
 }
