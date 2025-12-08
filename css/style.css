@@ -7,52 +7,124 @@ body {
     color: #333;
 }
 
-/* ===== Navbar ===== */
-.navbar {
+/* ============================================================
+   TOP HEADER
+============================================================ */
+.top-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
-    background-color: #fff;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    padding: 8px 40px;
+    background: #ffffff;
+    font-size: 14px;
+    color: #555;
+    border-bottom: 1px solid #e5e5e5;
 }
 
-.navbar .logo img {
-    height: 40px;
+.top-header a {
+    text-decoration: none;
+    color: #555;
+}
+
+.top-header a:hover {
+    color: #e60012;
+}
+
+.top-header .divider {
+    color: #ccc;
+    margin: 0 8px;
+}
+
+.search-icon {
+    margin-right: 5px;
+}
+
+/* 🔥 ALJ logo bigger */
+.alj-logo {
+    height: 36px; /* was 26px */
+    vertical-align: middle;
+}
+
+/* ============================================================
+   MAIN TOYOTA HEADER
+============================================================ */
+.toyota-header {
+    background: #ffffff;
+    padding: 20px 40px;
+    border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    justify-content: center;
+}
+
+.toyota-container {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+    max-width: 1500px;
+}
+
+/* 🔥 Toyota logo smaller */
+.toyota-logo {
+    height: 42px; /* was 55px */
+}
+
+.red-bar {
+    flex: 1;
+    height: 10px;
+    background: #e60012;
+    border-radius: 5px;
+}
+
+.hashtag {
+    font-size: 22px;
+    font-weight: 700;
+    color: #e60012;
+    white-space: nowrap;
+}
+
+/* ============================================================
+   NAVBAR
+============================================================ */
+.navbar {
+    display: flex;
+    justify-content: center;
+    padding: 15px 50px;
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    position: sticky;
+    top: 0;
+    z-index: 150;
 }
 
 .nav-links {
-    list-style: none;
     display: flex;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
+    list-style: none;
+    gap: 40px;
 }
 
-.nav-links li a {
+.nav-links a {
     text-decoration: none;
     color: #333;
     font-weight: 500;
-    transition: color 0.3s;
 }
 
-.nav-links li a:hover,
-.nav-links li a.active {
-    color: #e60012; /* Toyota red */
+.nav-links a:hover,
+.nav-links a.active {
+    color: #e60012;
 }
 
-/* ===== Hero Section ===== */
+/* ============================================================
+   HERO
+============================================================ */
 .hero {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
     background: url('https://ayushbhardwaj199.github.io/assets/background-placeholder.png') no-repeat center/cover;
     height: 80vh;
     color: #fff;
+    text-align: center;
     position: relative;
 }
 
@@ -63,144 +135,95 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Overlay for readability */
+    background-color: rgba(0, 0, 0, 0.4);
     z-index: 1;
 }
 
-.hero .hero-content {
+.hero-content {
     position: relative;
     z-index: 2;
 }
 
 .hero h1 {
     font-size: 3rem;
-    margin-bottom: 15px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 25px;
 }
 
 .btn-primary {
-    background-color: #e60012;
-    color: #fff;
+    background: #e60012;
     padding: 12px 25px;
+    color: #fff;
     border-radius: 50px;
     text-decoration: none;
-    font-weight: 500;
-    transition: background 0.3s;
 }
 
-.btn-primary:hover {
-    background-color: #b8000f;
-}
-
-/* ===== Models Preview Section ===== */
+/* ============================================================
+   MODELS (FIXED & CLEAN)
+============================================================ */
 .models-preview {
-    padding: 60px 50px;
     text-align: center;
-}
-
-.models-preview h2 {
-    font-size: 2.2rem;
-    margin-bottom: 40px;
+    padding: 60px 50px;
 }
 
 .grid {
     display: flex;
-    gap: 30px;
     justify-content: center;
+    gap: 35px; /* bigger gap for balance */
     flex-wrap: wrap;
 }
 
+/* clean card styling */
 .card {
-    background-color: #fff;
-    border-radius: 15px;
+    width: 300px; /* larger, premium look */
+    background: #fff;
+    border-radius: 18px;
     overflow: hidden;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-    width: 300px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card img {
     width: 100%;
-    height: 200px;
+    height: 130px;
     object-fit: cover;
 }
 
 .card h3 {
-    margin: 15px 0 10px;
+    margin: 18px 0 8px;
+    font-size: 1.3rem;
 }
 
 .card p {
-    padding: 0 15px 15px;
-    font-size: 0.95rem;
+    padding: 0 20px 20px;
+    font-size: 0.98rem;
     color: #666;
+    line-height: 1.45;
 }
 
 .card .btn-small {
-    display: inline-block;
-    margin: 0 0 15px;
-    padding: 8px 20px;
-    border-radius: 50px;
-    background-color: #e60012;
-    color: #fff;
-    text-decoration: none;
+    align-self: center;
+    margin-bottom: 20px;
+    padding: 10px 24px;
     font-size: 0.9rem;
-    transition: background 0.3s;
-}
-
-.card .btn-small:hover {
-    background-color: #b8000f;
+    border-radius: 30px;
+    background-color: #e60012;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transform: translateY(-6px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.18);
 }
 
-/* ===== Footer ===== */
+/* ============================================================
+   FOOTER
+============================================================ */
 footer {
+    background: #fff;
+    padding: 25px;
     text-align: center;
-    padding: 25px 50px;
-    background-color: #fff;
     color: #666;
-    border-top: 1px solid #e0e0e0;
-}
-
-/* ===== Responsive ===== */
-@media (max-width: 1024px) {
-    .navbar {
-        padding: 15px 30px;
-    }
-
-    .grid {
-        gap: 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .grid {
-        flex-direction: column;
-        align-items: center;
-    }
 }
