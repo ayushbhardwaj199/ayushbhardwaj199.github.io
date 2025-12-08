@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toyota Demo - Home</title>
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://ayushbhardwaj199.github.io/assets/logo-placeholder.png">
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <script type="text/javascript">
 var ScarabQueue = ScarabQueue || [];
@@ -18,21 +22,54 @@ var ScarabQueue = ScarabQueue || [];
 </script>
 </head>
 <body>
-    <!-- Header / Navbar -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <img src="assets/logo-placeholder.png" alt="Toyota Logo">
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="vehicles.html">Vehicles</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="offers.html">Offers</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+
+    <!-- ================= TOP HEADER ================= -->
+    <div class="top-header">
+        <div class="left-side">
+            <span class="search-icon">🔍</span>
+            <a href="#">Search</a>
+            <span class="divider">|</span>
+            <a href="#">العربية</a>
+        </div>
+
+        <div class="right-side">
+            <a href="#">Book a Service</a>
+            <span class="divider">|</span>
+            <a href="#">Spare Parts</a>
+            <span class="divider">|</span>
+
+            <!-- RIGHT LOGO (replaced with working one) -->
+            <img src="https://ayushbhardwaj199.github.io/assets/logo-placeholder.png" 
+                 alt="Toyota Motors" 
+                 class="alj-logo">
+        </div>
+    </div>
+
+    <!-- ================= MAIN TOYOTA HEADER ================= -->
+    <header class="toyota-header">
+        <div class="toyota-container">
+
+            <!-- LEFT LOGO (Toyota Official) -->
+            <img src="https://www.toyota.com.sa/-/media/feature/toyotaksa/identity/toyotalogo/logo_new.svg" 
+                 alt="Toyota Logo" 
+                 class="toyota-logo">
+
+            <div class="red-bar"></div>
+
+            <div class="hashtag">#YourTomorrowToday</div>
+        </div>
     </header>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="vehicles.html">Vehicles</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="offers.html">Offers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -48,29 +85,35 @@ var ScarabQueue = ScarabQueue || [];
         <h2>Popular Models</h2>
         <div class="grid">
             <div class="card">
-                <img src="assets/img-placeholder.jpg" alt="Model A">
-                <h3>Model A</h3>
+                <img src="https://www.toyota.com.sa/-/media/feature/toyotaksa/vehicle/passenger/yaris/gallery/yaris_thumb.png?h=220&w=520&la=en&hash=B970BB063A129BCE3F077BAA007B57C9C544B41A" alt="Model A">
+                <h3>Yaris 2026</h3>
                 <p>Redefining efficiency with style and performance.</p>
                 <a href="vehicles.html" class="btn-small">View More</a>
             </div>
 
             <div class="card">
-                <img src="assets/img-placeholder.jpg" alt="Model B">
-                <h3>Model B</h3>
+                <img src="https://www.toyota.com.sa/-/media/feature/toyotaksa/vehicle/passenger/corolla/blue-520x220.png?h=220&w=520&la=en&hash=666362040245F01C8686F92494C1CABADFDFB9AE" alt="Model B">
+                <h3>Corolla 2026</h3>
                 <p>Experience luxury and comfort in every drive.</p>
                 <a href="vehicles.html" class="btn-small">View More</a>
             </div>
 
             <div class="card">
-                <img src="assets/img-placeholder.jpg" alt="Model C">
-                <h3>Model C</h3>
+                <img src="https://www.toyota.com.sa/-/media/feature/toyotaksa/vehicle/passenger/crown/t2.png?h=220&w=520&la=en&hash=EF338738B33F50CBFEE63CA5AD1E910AB2BF75E5" alt="Model C">
+                <h3>Crown 2026</h3>
+                <p>Built for adventure, engineered for safety.</p>
+                <a href="vehicles.html" class="btn-small">View More</a>
+            </div>
+
+            <div class="card">
+                <img src="https://www.toyota.com.sa/-/media/feature/toyotaksa/vehicle/passenger/camry/camry25/assets/520x220-colors/png/520x220-gle-front-silver.png?h=220&w=520&la=en&hash=3048CBB6CDC94BB7523D582515F6E03A52D4BAC8" alt="Model D">
+                <h3>Camry 2026</h3>
                 <p>Built for adventure, engineered for safety.</p>
                 <a href="vehicles.html" class="btn-small">View More</a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>© 2025 Toyota Demo Website — For Educational Use Only</p>
     </footer>
@@ -78,4 +121,3 @@ var ScarabQueue = ScarabQueue || [];
     <script src="js/main.js"></script>
 </body>
 </html>
-
